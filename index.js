@@ -18,6 +18,10 @@
 
 //   moviesContainer.innerHTML = renderMovies(movieData);
 // });
+function saveToWatchlist(imdbID) {
+  console.log(imdbID);
+}
+
 
 const myForm = document.getElementById('search-form');
 myForm.addEventListener('submit', (e) => {
@@ -31,7 +35,7 @@ myForm.addEventListener('submit', (e) => {
           <div class="card-body d-flex flex-column justify-content-between align-items-center" style="height: 35%">
             <h5 class="card-title">${currentMovie.Title}</h5>
             <p class="card-text">${currentMovie.Year}</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <button type="button" class="btn btn-primary" onclick="saveToWatchlist('${currentMovie.imdbID}')">Add to Watchlist</button>
           </div>
         </div>
       </div>
