@@ -20,18 +20,18 @@
 // });
 
 const myForm = document.getElementById('search-form');
-myForm.addEventListener('submit', function(e) {
+myForm.addEventListener('submit', (e) => {
   e.preventDefault();
   function renderMovies(movieArray) {
-    let movieHtmlArray = movieArray.map(function(currentMovie) {
+    let movieHtmlArray = movieArray.map((currentMovie) => {
       return `
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-        <div class="card w-100 h-100 d-flex border border-danger">
-          <img class="card-img-top" src="${currentMovie.Poster}" alt="Card image cap">
-          <div class="card-body d-flex flex-column border border-success justify-content-between" style="height: 100%">
-            <h5 class="card-title border border-info">${currentMovie.Title}</h5>
-            <p class="card-text border border-info">${currentMovie.Year}</p>
-            <a href="#" class="btn btn-primary justify-self-end">Go somewhere</a>
+        <div class="card w-100 h-100 d-flex">
+          <img class="card-img-top" src="${currentMovie.Poster}" alt="Card image cap" style="height: 65%">
+          <div class="card-body d-flex flex-column justify-content-between align-items-center" style="height: 35%">
+            <h5 class="card-title">${currentMovie.Title}</h5>
+            <p class="card-text">${currentMovie.Year}</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
       </div>
