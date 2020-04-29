@@ -20,6 +20,16 @@
 // });
 function saveToWatchlist(imdbID) {
   console.log(imdbID);
+  const movie = movieData.find(currentMovie => currentMovie.imdbID == imdbID);
+  console.log(movie)
+  let watchlistJSON = localStorage.getItem('watchlist');
+  let watchlist = JSON.parse(watchlistJSON);
+  if (watchlist == null) {
+    watchlist = []
+  }
+  watchlist.push(movie);
+  watchlistJSON = JSON.stringify(watchlist);
+  localStorage.setItem('watchlist', watchlistJSON);
 }
 
 
@@ -27,7 +37,7 @@ const myForm = document.getElementById('search-form');
 myForm.addEventListener('submit', (e) => {
   e.preventDefault();
   function renderMovies(movieArray) {
-    let movieHtmlArray = movieArray.map((currentMovie) => {
+    let movieHtmlArray = movieArray.map(currentMovie => {
       return `
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
         <div class="card w-100 h-100 d-flex">
