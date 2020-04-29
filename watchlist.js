@@ -1,8 +1,8 @@
 watchlist = localStorage.getItem('watchlist')
-console.log(watchlist)
+// console.log(watchlist)
 
 parsedList = JSON.parse(watchlist)
-console.log(parsedList)
+// console.log(parsedList)
 
 
 function renderMovies(movieArray) {
@@ -14,7 +14,7 @@ function renderMovies(movieArray) {
     <div class="card-body d-flex flex-column justify-content-between align-items-center" style="height: 35%">
     <h5 class="card-title">${currentMovie.Title}</h5>
     <p class="card-text">${currentMovie.Year}</p>
-    <button type="button" class="btn btn-primary" onclick="saveToWatchlist('${currentMovie.imdbID}')">Remove From Watchlist</button>
+    <button type="button" class="btn btn-primary" onclick="removeFromWatchlist('${currentMovie.imdbID}')">Remove From Watchlist</button>
     </div>
     </div>
     </div>
@@ -26,3 +26,15 @@ function renderMovies(movieArray) {
 const moviesContainer = document.querySelector('#movies-container')
 const moviesRow = document.querySelector('.row')
 moviesContainer.innerHTML = renderMovies(parsedList);
+
+function removeFromWatchlist(imdbID) {
+  const movie = movieData.find(currentMovie => currentMovie.imdbID == imdbID);
+  let watchlistJSON = localStorage.getItem('watchlist');
+  let watchlist = JSON.parse(watchlistJSON);
+  let updatedWatchlist = watchlist.filter(item => {
+    return item.Title != movie.Title
+  });
+  watchlistJSON = JSON.stringify(updatedWatchlist);
+  localStorage.setItem('watchlist', watchlistJSON);
+  moviesContainer.innerHTML = renderMovies(updatedWatchlist);
+}
