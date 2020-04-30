@@ -14,3 +14,8 @@ body {
 	margin-top: 20px;
 }
 
+.btn:focus, .btn:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+

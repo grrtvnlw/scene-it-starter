@@ -28,6 +28,8 @@ function saveToWatchlist(imdbID) {
     watchlist = []
   }
   watchlist.push(movie);
+  // const uniqueSet = new Set(watchlist);
+  // const displayWatchlist = [...uniqueSet]
   watchlistJSON = JSON.stringify(watchlist);
   localStorage.setItem('watchlist', watchlistJSON);
 }
