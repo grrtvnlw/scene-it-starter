@@ -38,7 +38,7 @@ myForm.addEventListener('submit', (e) => {
           moviesContainer.innerHTML += (`
             <div class="col-6 col-sm-6 col-md-4 col-lg-3 mb-3">
               <div class="card w-100 h-100 d-flex">
-                <img class="card-img-top" src="${response.data.Poster}" alt="Card image cap" style="height: 65%">
+                <img class="card-img-top" src="${response.data.Poster}" onerror="if (this.src != 'no_image.png') this.src = 'no_image.png';" alt="Card image cap" style="height: 65%">
                 <div class="card-body d-flex flex-column justify-content-between align-items-center w-100 p-0 pt-3 m-0" style="height: 35%">
                 <div class="d-flex flex-column justify-content-evenly align-items-center" style="height: 80%">
                   <div class="mb-0">
