@@ -8,13 +8,13 @@ function renderMovies(movieArray) {
     <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
       <div class="card w-100 h-100 d-flex">
         <img class="card-img-top" src="${currentMovie.Poster}" alt="Card image cap" style="height: 65%">
-        <div class="card-body d-flex flex-column justify-content-between align-items-center border border-danger w-100 p-0 m-0" style="height: 35%">
-          <div class="d-flex flex-column justify-content-start align-items-center border border-dark rounded" style="height: 75%">
+        <div class="card-body d-flex flex-column justify-content-between align-items-center w-100 p-0 m-0" style="height: 35%">
+          <div class="d-flex flex-column justify-content-start align-items-center" style="height: 75%">
             <h5 class="card-title text-center p-0 m-0">${currentMovie.Title}</h5>
             <p class="card-text  p-0 m-0">${currentMovie.Year}</p>
           </div>
-          <div class="d-flex flex-column justify-content-end align-items-center border border-dark rounded w-100 p-0 m-0" style="height: 25%">
-            <button type="button" class="btn btn-primary p-0 m-0" onclick="removeFromWatchlist('${currentMovie.imdbID}')">Remove from Watchlist</button>
+          <div class="d-flex flex-column justify-content-end align-items-center w-100 p-0 m-0 pb-3" style="height: 25%">
+            <button type="button" class="btn btn-primary p-1 m-0" onclick="removeFromWatchlist('${currentMovie.imdbID}')">Remove from Watchlist</button>
           </div>        
         </div>
       </div>
