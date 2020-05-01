@@ -10,11 +10,11 @@ function renderMovies(movieArray) {
         <img class="card-img-top" src="${currentMovie.Poster}" alt="Card image cap" style="height: 65%">
         <div class="card-body d-flex flex-column justify-content-between align-items-center border border-danger w-100 p-0 m-0" style="height: 35%">
           <div class="d-flex flex-column justify-content-start align-items-center border border-dark rounded" style="height: 75%">
-            <h5 class="card-title text-center">${currentMovie.Title}</h5>
-            <p class="card-text">${currentMovie.Year}</p>
+            <h5 class="card-title text-center p-0 m-0">${currentMovie.Title}</h5>
+            <p class="card-text  p-0 m-0">${currentMovie.Year}</p>
           </div>
-          <div class="d-flex flex-column justify-content-end align-items-center border border-dark rounded w-100" style="height: 25%">
-            <button type="button" class="btn btn-primary p-1" onclick="removeFromWatchlist('${currentMovie.imdbID}')">Remove from Watchlist</button>
+          <div class="d-flex flex-column justify-content-end align-items-center border border-dark rounded w-100 p-0 m-0" style="height: 25%">
+            <button type="button" class="btn btn-primary p-0 m-0" onclick="removeFromWatchlist('${currentMovie.imdbID}')">Remove from Watchlist</button>
           </div>        
         </div>
       </div>
