@@ -1,5 +1,6 @@
 body {
-	background-color: #B2E9FD;
+	/* background-color: #B2E9FD; */
+	background-color: #E8E8E8;
 }
 
 .header h2 {
@@ -20,7 +21,7 @@ body {
 }
 
 a {
-	color: black;
+	color: #50524F;
 	text-decoration: none;
 }
 
@@ -28,4 +29,17 @@ a:hover {
 	color: black;
 }
 
+/* input:focus,
+input:active {
+	outline:0px !important;
+  -webkit-appearance:none !important;
+	box-shadow: none !important;
+} */
+
+.form-control:active,
+.form-control:focus {
+	outline:none !important;
+  -webkit-appearance:none !important;
+	box-shadow: none !important;
+} 
 
