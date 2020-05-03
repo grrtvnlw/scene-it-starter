@@ -48,7 +48,6 @@ $(document).ready(function() {
           let movieHtmlArray = movieArray.map(currentMovie => {
             axios.get("http://www.omdbapi.com/?apikey=efe3c50b&i=" + currentMovie.imdbID)
             .then(function (response) {
-              console.log(response.data.Title)
               moviesContainer.innerHTML += (`
               <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
               <div class="card w-100 h-100 d-flex flex-column">
