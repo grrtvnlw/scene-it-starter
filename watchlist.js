@@ -4,7 +4,6 @@ parsedList = JSON.parse(watchlist)
 
 function renderMovies(movieArray) {
   let movieHtmlArray = movieArray.map(currentMovie => {
-    // console.log(movieArray)
     axios.get("http://www.omdbapi.com/?apikey=efe3c50b&i=" + currentMovie.imdbID)
       .then(function (response) {
         moviesContainer.innerHTML += (`
