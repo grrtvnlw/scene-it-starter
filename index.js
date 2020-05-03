@@ -18,7 +18,7 @@ function saveToWatchlist(imdbID) {
 // const myForm = document.getElementById('search-form');
 $(document).ready(function() {
 
-  $('#search-form').on('click' , function(e) {
+  $('#search-form').on('submit' , function(e) {
     e.preventDefault();
     let searchString = $('.search-bar').val()
     let urlEncodedSearchString = encodeURIComponent(searchString)
