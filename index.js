@@ -40,7 +40,7 @@ myForm.addEventListener('submit', (e) => {
                 <div class="d-flex" style="height: 65%">
                   <img class="card-img-top" src="${response.data.Poster}" onerror="if (this.src != 'no_image.png') this.src='no_image.png';" alt="Card image cap">
                 </div>
-                <div class="card-body d-flex flex-column justify-content-between align-items-center p-0 pt-2 m-0 overflow-auto" style="height: 25%">
+                <div class="card-body d-flex flex-column justify-content-between align-items-center p-0 pt-2 m-0 overflow-auto" style="height: 27%">
                   <a href="https://en.wikipedia.org/wiki/${response.data.Title}" target="_blank"><h5 class="card-title text-center m-0 p-0 font-weight-bold">${response.data.Title}</h5></a>
                   <div class="dropdown d-flex align-items-center m-0 p-0 pt-2">
                     <p class="card-text mr-4 m-0 p-0">${response.data.Year}</p>
@@ -72,7 +72,7 @@ myForm.addEventListener('submit', (e) => {
                       <p class="card-text text-center border border-dark rounded p-1 font-weight-bold"><span class="bg-warning p-1 rounded font-weight-bold">IMDb</span> ${response.data.imdbRating}/10 ⭐️</p>
                     </div>
                   </div>
-                  <div class="d-flex flex-column justify-content-center align-items-center" style="height: 10%">
+                  <div class="d-flex flex-column justify-content-center align-items-center" style="height: 8%">
                     <button type="button" class="btn btn-light p-1" onclick="saveToWatchlist('${response.data.imdbID}')">Add to Watchlist</button>
                   </div>
                 </div>
