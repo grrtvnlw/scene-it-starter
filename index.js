@@ -81,7 +81,7 @@ $('#search-form').on('submit' , function(e) {
                     </div>
                     </div>
                     <div class="text-center d-flex justify-content-center m-0 p-2">
-                      <p class="card-text text-center border border-dark rounded p-1 font-weight-bold"><span class="bg-warning p-1 rounded font-weight-bold">IMDb</span> ${response.data.imdbRating}/10 ⭐️</p>
+                      <p class="card-text text-center border border-dark rounded p-1 font-weight-bold"><span class="bg-warning p-1 rounded font-weight-bold"><a href="https://www.imdb.com/title/${response.data.imdbID}" target="_blank">IMDb</a></span> ${response.data.imdbRating}/10 ⭐️</p>
                     </div>
                   </div>
                   <div class="d-flex flex-column justify-content-center align-items-center" style="height: 8%">

@@ -29,6 +29,15 @@ a:hover {
 	color: black;
 }
 
+p a {
+	text-decoration: none;
+	color: black;
+}
+
+/* p > a:hover {
+
+} */
+
 /* input:focus,
 input:active {
 	outline:0px !important;
