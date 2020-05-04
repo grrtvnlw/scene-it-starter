@@ -1,5 +1,4 @@
 body {
-	/* background-color: #B2E9FD; */
 	background-color: #E8E8E8;
 }
 
@@ -33,17 +32,6 @@ p a {
 	text-decoration: none;
 	color: black;
 }
-
-/* p > a:hover {
-
-} */
-
-/* input:focus,
-input:active {
-	outline:0px !important;
-  -webkit-appearance:none !important;
-	box-shadow: none !important;
-} */
 
 .form-control:active,
 .form-control:focus {
